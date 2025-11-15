@@ -20,47 +20,4 @@ genBtn.addEventListener("click", function(){
      leftText.textContent =   generateRandomPassword()
      rightText.textContent =  generateRandomPassword()
 })
-function copy(){
-    navigator.clipboard.writeText(
-        document.getElementById("left-icon").textContent
-    )
 
-}
-function copyParagraphText() {
-  const paragraph = document.getElementById("left-text");
-  const textToCopy = paragraph.innerText; // Get the text content of the paragraph
-  const copyMessage = document.getElementById("copyMessage");
-
-  navigator.clipboard.writeText(textToCopy)
-    .then(() => {
-      // Success: Show a message and then hide it
-      copyMessage.style.display = "inline";
-      setTimeout(() => {
-        copyMessage.style.display = "none";
-      }, 2000); // Hide after 2 seconds
-    })
-    .catch(err => {
-      // Error: Handle potential issues (e.g., user denied permission)
-      console.error("Failed to copy text: ", err);
-      alert("Failed to copy text. Please try again.");
-    });
-}
-function copyParagraphText() {
-  const paragraph2 = document.getElementById("right-text");
-  const textToCopy2 = paragraph2.innerText; // Get the text content of the paragraph
-  const copyMessage2 = document.getElementById("copyMessage");
-
-  navigator.clipboard.writeText(textToCopy2)
-    .then(() => {
-      // Success: Show a message and then hide it
-      copyMessage2.style.display = "inline";
-      setTimeout(() => {
-        copyMessage2.style.display = "none";
-      }, 2000); // Hide after 2 seconds
-    })
-    .catch(err => {
-      // Error: Handle potential issues (e.g., user denied permission)
-      console.error("Failed to copy text: ", err);
-      alert("Failed to copy text. Please try again.");
-    });
-}
