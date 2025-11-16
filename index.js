@@ -27,7 +27,7 @@ function copyText() {
     
     const msg = document.getElementById("msg");
 
-    navigator.clipboard.writeText(rightText.value).then(() => {
+    navigator.clipboard.writeText(rightText.innerText).then(() => {
         msg.innerText = "Copied!";
         msg.style.display = "inline-block";   // show message
 
@@ -50,7 +50,7 @@ function copyText() {
 function copyTexts() {
     const msg = document.getElementById("msg");
 
-    navigator.clipboard.writeText(leftText.value).then(() => {
+    navigator.clipboard.writeText(leftText.innerText).then(() => {
         msg.innerText = "Copied!";
         msg.style.display = "inline-block";   // show message
 
