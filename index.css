@@ -8,15 +8,16 @@ body {
 }
 
 #container{
-width: 600px;
-height: 600px;
+width: 83%;
+height: 530px;
 border: 1px solid white;
 border-radius: 5px;
 background-color: #1F2937;
 opacity: 1;
 padding-left: 20px;
 padding-right: 10px;
-margin: 0 auto;
+margin-left: auto;
+margin-right: auto;
 
 }
 
