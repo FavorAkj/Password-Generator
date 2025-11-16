@@ -1,9 +1,10 @@
+
+
 body {
-    
+   
+    padding: 20px;
     background-image: url("password back.jpg");
     background-size: cover;
-    height: 100vh;
-   
 }
 
 #container{
@@ -15,8 +16,7 @@ background-color: #1F2937;
 opacity: 1;
 padding-left: 20px;
 padding-right: 10px;
-max-width: 80%;
-margin: auto;
+margin: 0 auto;
 }
 
 #text{

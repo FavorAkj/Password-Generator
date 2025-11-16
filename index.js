@@ -3,7 +3,9 @@ let characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","
 let passwordLength = 15
 let genBtn = document.getElementById("gen-btn")
 let leftText = document.getElementById("left-text")
-let rightText = document.getElementById("right-text")
+ let rightText = document.getElementById("right-text")
+const leftIcon = document.getElementById("left-icon")
+const rightIcon =document.getElementById("right-icon")
 
 function getRandomCharacter(){
    let oneCharacter = Math.floor(Math.random()* characters.length)
@@ -21,3 +23,16 @@ genBtn.addEventListener("click", function(){
      rightText.textContent =  generateRandomPassword()
 })
 
+rightIcon.addEventListener("click", function() {
+    navigator.clipboard.writeText(rightText.value).then(() => {      
+    }).catch(err => {
+  console.error("Error copying text: ", err)
+    })  
+})
+
+leftIcon.addEventListener("click", function() {
+    navigator.clipboard.writeText(leftText.value).then(() => {      
+    }).catch(err => {
+  console.error("Error copying text: ", err)
+    })  
+})
