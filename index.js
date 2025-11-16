@@ -23,16 +23,49 @@ genBtn.addEventListener("click", function(){
      rightText.textContent =  generateRandomPassword()
 })
 
-rightIcon.addEventListener("click", function() {
-    navigator.clipboard.writeText(rightText.value).then(() => {      
-    }).catch(err => {
-  console.error("Error copying text: ", err)
-    })  
-})
+function copyText() {
+    
+    const msg = document.getElementById("msg");
 
-leftIcon.addEventListener("click", function() {
-    navigator.clipboard.writeText(leftText.value).then(() => {      
+    navigator.clipboard.writeText(rightText.value).then(() => {
+        msg.innerText = "Copied!";
+        msg.style.display = "inline-block";   // show message
+
+        // Hide after 2 seconds
+        setTimeout(() => {
+            msg.style.display = "none";
+        }, 2000);
+
     }).catch(err => {
-  console.error("Error copying text: ", err)
-    })  
-})
+        msg.innerText = "Failed to copy";
+        msg.style.backgroundColor = "#dc3545"; // red
+        msg.style.display = "inline-block";
+
+        setTimeout(() => {
+            msg.style.display = "none";
+        }, 2000);
+    });
+}
+
+function copyTexts() {
+    const msg = document.getElementById("msg");
+
+    navigator.clipboard.writeText(leftText.value).then(() => {
+        msg.innerText = "Copied!";
+        msg.style.display = "inline-block";   // show message
+
+        // Hide after 2 seconds
+        setTimeout(() => {
+            msg.style.display = "none";
+        }, 2000);
+
+    }).catch(err => {
+        msg.innerText = "Failed to copy";
+        msg.style.backgroundColor = "#dc3545"; // red
+        msg.style.display = "inline-block";
+
+        setTimeout(() => {
+            msg.style.display = "none";
+        }, 2000);
+    });
+}

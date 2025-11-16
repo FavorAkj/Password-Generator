@@ -2,6 +2,8 @@
     <head>
         <link rel="stylesheet" href="index.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
     <body>
         <div id="container">
@@ -17,14 +19,14 @@
                 <div id="text-container">
                      <div class="area-container">
                     <p id="left-text"> </p>
-                    <button class="fas fa-copy" id="left-icon"></button>
-                    <p id="status"></p>
+                    <button class="fas fa-copy" id="left-icon" onclick="copyTexts()"></button>
+                    <p id="msg"></p>
                    
                  </div>
                 <div class="area-container">
                     <p id="right-text"></p>
-                   <button class="fas fa-copy" id="right-icon"></button>
-                    <p id="status"></p>
+                   <button class="fas fa-copy" id="right-icon" onclick="copyText()"></button>
+                    <p id="msg"></p>
                 </div>
                 </div>
              
